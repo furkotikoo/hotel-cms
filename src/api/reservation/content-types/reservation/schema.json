@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "reservation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "enterenceDate": {
+      "type": "datetime"
+    },
+    "exitDate": {
+      "type": "datetime"
+    },
+    "howManyGuests": {
+      "type": "integer"
+    },
+    "hotel_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hotel.hotel",
+      "inversedBy": "reservations"
+    }
+  }
+}
